@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Pagina Inicial</title>
+
+</head>
+<body>
+    <header>
+        <div class="deg_header">
+
+            <div class="asociados_header">
+                <img src="/imagenes/LOGO.svg" alt="">
+                <img src="/imagenes/JMKenpo.png" alt="">
+                <img src="/imagenes/FW.png" alt="">
+                <img id="pam" src="/imagenes/1733285474859.png" alt="">
+                <img src="/imagenes/1733683970858.png" alt="" class="skw">
+            </div>
+
+            <div class="botones_header">
+                <button>Inscripcion</button>
+                <button>Contacto</button>
+            </div>
+
+            <!-- Contenedor para el video con la imagen de previsualización -->
+            <div class="video-container">
+                <!-- Imagen placeholder -->
+                <div class="placeholder" id="video-placeholder" onclick="loadVideo()">
+                    <!-- Miniatura personalizada del video -->
+                    <img src="/imagenes/Component 1.png" alt="Video Thumbnail">
+                    <!-- Overlay con botón de reproducción -->
+                    <div class="overlay">
+                        <img src="/imagenes/play-button.png" alt="Play Icon">
+                    </div>
+                </div>
+
+                <!-- Iframe oculto inicialmente -->
+                <iframe
+                    id="youtube-video"
+                    src=""
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="combo">
+            <div class="clasico">  
+                <h2>Junio 21-22, 2025</h2>
+                <h1>CLASICO DEL CARIBE</h1>
+                <h2>DE LAS ARTES MARCIALES</h2>
+                <h1>CARTAGENA OPEN 3RD EDICIÓN</h1>
+            </div>
+
+            <div class="botones">
+                <a href="https://fitofan.com/clasicodelcaribeam"> <button> Inscripción</button> </a>
+               <a href="/contacto/index.html"> <button>Contacto</button> </a> 
+               <a href="/informacion/index.html"> <button>Información</button> </a> 
+            </div>
+        </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="competidores_div">
+            <div class="competidores_deg">
+                <h1>COMPETIDORES</h1>
+               <a href="https://fitofan.com/clasicodelcaribeam"> <button>Inscripción</button>  </a>
+            </div>
+        </div>
+
+        <div class="info_div">
+            <div class="info_deg">
+                <h1>INFORMACIÓN</h1>
+               <a href="/informacion/index.html"><button>LEER</button> </a>
+            </div>
+        </div>
+
+        <div class="hosp_div">
+            <div class="hosp_deg">
+                <h1>PASADIAS</h1>
+                <a href="/pasadia/index.html"> <button>SOLICITAR INFORMACIÓN</button>  </a> 
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script>
+        // Función para cargar el iframe del video tras hacer clic
+        function loadVideo() {
+            const iframe = document.getElementById('youtube-video');
+            const placeholder = document.getElementById('video-placeholder');
+
+            // Establecer la URL del video con autoplay activado
+            iframe.src = "https://www.youtube.com/embed/dapuY_bxcOg?enablejsapi=1&autoplay=1&controls=0&modestbranding=1&rel=0";
+            
+            // Mostrar el iframe y ocultar el placeholder
+            iframe.style.display = "block";
+            placeholder.style.display = "none";
+        }
+    </script>
+</body>
+</html>
